@@ -1,10 +1,10 @@
 import {
     IonButton,
-    IonButtons,
-    IonContent,
-    IonHeader, IonIcon,
+    IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCol,
+    IonContent, IonGrid,
+    IonHeader, IonIcon, IonImg,
     IonMenuButton,
-    IonPage, IonTabBar,
+    IonPage, IonRow, IonTabBar,
     IonTabButton, IonTabs,
     IonTitle,
     IonToolbar
@@ -14,6 +14,15 @@ import './Tab1.css';
 import {menuOutline, createOutline, homeOutline, sunny} from "ionicons/icons";
 
 const Tab1: React.FC = () => {
+    const feedItems = [
+        { id: 1, imageUrl: 'https://via.placeholder.com/300', title: '标题 1', description: '描述 1' },
+        { id: 2, imageUrl: 'https://via.placeholder.com/300', title: '标题 2', description: '描述 2' },
+        { id: 3, imageUrl: 'https://via.placeholder.com/300', title: '标题 3', description: '描述 3' },
+        { id: 4, imageUrl: 'https://via.placeholder.com/300', title: '标题 4', description: '描述 4' },
+        { id: 5, imageUrl: 'https://via.placeholder.com/300', title: '标题 5', description: '描述 5' },
+        { id: 6, imageUrl: 'https://via.placeholder.com/300', title: '标题 6', description: '描述 6' },
+    ];
+
     return (
         <IonPage>
             <IonHeader>
@@ -58,12 +67,22 @@ const Tab1: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
-                <IonHeader collapse="condense">
-                    <IonToolbar>
-                        <IonTitle size="large">首页</IonTitle>
-                    </IonToolbar>
-                </IonHeader>
-                <ExploreContainer name="Hello Hooke!"/>
+                <IonGrid>
+                    <IonRow>
+                        {/* 遍历 Feed 项目 */}
+                        {feedItems.map((item) => (
+                            <IonCol key={item.id} size="6" sizeMd="4" sizeLg="3">
+                                <IonCard>
+                                    <IonImg src={item.imageUrl} alt={item.title} />
+                                    <IonCardHeader>
+                                        <IonCardTitle>{item.title}</IonCardTitle>
+                                    </IonCardHeader>
+                                    <IonCardContent>{item.description}</IonCardContent>
+                                </IonCard>
+                            </IonCol>
+                        ))}
+                    </IonRow>
+                </IonGrid>
             </IonContent>
         </IonPage>
     );
