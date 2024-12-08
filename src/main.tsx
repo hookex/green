@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+import "./globals.css";
 import { SplashScreen } from '@capacitor/splash-screen';
 
 // 在组件挂载后隐藏启动画面
