@@ -69,7 +69,7 @@ const App: React.FC = () => (
             <Redirect to="/tab1" />
           </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+        <IonTabBar mode='ios' slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon aria-hidden="true" icon={homeOutline} />
             <IonLabel>首页</IonLabel>
