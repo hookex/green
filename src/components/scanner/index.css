@@ -1,0 +1,16 @@
+.scan-result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.scan-result h3 {
+    margin: 0 0 10px;
+}
+
+.scan-result p {
+    margin: 0;
+    word-break: break-word;
+    color: #333;
+}

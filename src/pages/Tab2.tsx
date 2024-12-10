@@ -9,7 +9,7 @@ import {
   IonTitle,
   IonToolbar
 } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import ExploreContainer from '../components/explore-container/ExploreContainer';
 import './Tab2.css';
 import {useState} from "react";
 
