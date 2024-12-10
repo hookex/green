@@ -1,6 +1,6 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
-  IonApp,
+  IonApp, IonBadge,
   IonIcon,
   IonLabel,
   IonRouterOutlet,
@@ -81,6 +81,7 @@ const App: React.FC = () => (
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon aria-hidden="true" icon={chatbubbleEllipsesOutline} />
             <IonLabel>消息</IonLabel>
+            <IonBadge color="danger">3</IonBadge>
           </IonTabButton>
           <IonTabButton tab="tab4" href="/tab4">
             <IonIcon aria-hidden="true" icon={personOutline} />
