@@ -14,6 +14,10 @@ const config: CapacitorConfig = {
       showSpinner: true,        // 是否显示加载指示器
       spinnerStyle: 'large',    // 加载指示器样式（针对 iOS）
       spinnerColor: '#ffffff'   // 加载指示器颜色
+    },
+    BarcodeScanner: {
+      "background": "#000000",
+      "hideBackgroundOnScan": false
     }
   }
 };
